@@ -12,6 +12,7 @@ body {
   display: flex;
   gap: 8px;
   flex: 1;
+  padding-top: 16px;
   width: 100%;
 }
 .header-icon-list {

@@ -4,6 +4,7 @@ import Navigation from "../organisms/navigation";
 import Search from "../organisms/search";
 
 import "../styles/app.css";
+import LabTabs from "../atoms/tabButtons.tsx";
 
 function App() {
   return (

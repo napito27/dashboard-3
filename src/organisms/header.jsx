@@ -7,9 +7,11 @@ import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSati
 import WorkHistoryOutlinedIcon from '@mui/icons-material/WorkHistoryOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 
-import { Avatar, Box, Button, InputBase, IconButton, Stack } from '@mui/material';
+import { Avatar, Box, Button, InputBase, IconButton, Stack, Tab } from '@mui/material';
 
 import "../styles/app.css";
+import LabTabs from '../atoms/tabButtons.tsx';
+import TabList from '@mui/lab/TabList';
 
 const BUTTON_STYLES = {
   flex: 1,
@@ -24,11 +26,14 @@ function Header() {
       <Box  className='header-title'>
         <h3>Home</h3>
       </Box>
-      <Stack direction="row" >
-        <Button variant="text" style={BUTTON_STYLES}>For you</Button>
-        <Button variant="text" style={BUTTON_STYLES}>Following</Button>
-      </Stack>
-      <hr />
+      <LabTabs />
+      {/* <Stack direction="row" >
+          <Tab label="For you" style={BUTTON_STYLES}/>
+          <Tab label="Following" style={BUTTON_STYLES}/>
+      </Stack> */}
+        {/* <Button variant="text" style={BUTTON_STYLES}>For you</Button>
+        <Button variant="text" style={BUTTON_STYLES}>Following</Button> */}
+      {/* <hr /> */}
       <Box className="input-header">
         <Avatar style={{backgroundColor: "#00589E"}}>V</Avatar>
         <InputBase placeholder="What is happening?!"/>

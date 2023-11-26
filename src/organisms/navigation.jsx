@@ -1,16 +1,19 @@
 import React from 'react';
 
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
-import FeaturedPlayListOutlinedIcon from '@mui/icons-material/FeaturedPlayListOutlined';
-import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
-import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
-import PendingOutlinedIcon from '@mui/icons-material/PendingOutlined';
-import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
-
 import { Avatar, Box, Button, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+
+import { 
+  HomeOutlined,
+  SearchOutlined,
+  NotificationsNoneOutlined,
+  MailOutlineOutlined,
+  FeaturedPlayListOutlined,
+  PeopleOutlined,
+  PermIdentityOutlined,
+  PendingOutlined
+} from '@mui/icons-material';
+
+import logo from '../utils/logo-twitter.png'
 
 import "../styles/app.css";
 
@@ -29,68 +32,68 @@ function Navigation() {
     <Box className="navigation-container">
       <List>
         <ListItem >
-          <Avatar style={{backgroundColor: "white", color: "black"}}>X</Avatar>
+          <Avatar alt='X logo' src={logo} />
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton className='list-button'>
-            <HomeOutlinedIcon />
+            <HomeOutlined />
             <ListItemText primary="Home" />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton className='list-button'>
-            <SearchOutlinedIcon />
+            <SearchOutlined />
             <ListItemText primary="Explore" />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton className='list-button'>
-            <NotificationsNoneOutlinedIcon />
+            <NotificationsNoneOutlined />
             <ListItemText primary="Notifications" />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton className='list-button'>
-            <MailOutlineOutlinedIcon />
+            <MailOutlineOutlined />
             <ListItemText primary="Messages" />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton className='list-button'>
-            <FeaturedPlayListOutlinedIcon />
+            <FeaturedPlayListOutlined />
             <ListItemText primary="Lists" />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton className='list-button'>
-            <PeopleOutlinedIcon />
+            <PeopleOutlined />
             <ListItemText primary="Communities" />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
-          <ListItemButton className='list-button'>
-            <ClearOutlinedIcon />
+          <ListItemButton sx={{padding: "6px", gap: "10px"}} >
+            <Avatar disablePadding alt='X logo' src={logo} />
             <ListItemText primary="Premium" />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton className='list-button'>
-            <PermIdentityOutlinedIcon />
+            <PermIdentityOutlined />
             <ListItemText primary="Profile" />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton className='list-button'>
-            <PendingOutlinedIcon />
+            <PendingOutlined />
             <ListItemText primary="More" />
           </ListItemButton>
         </ListItem>

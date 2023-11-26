@@ -6,7 +6,7 @@ import { Box, CssBaseline, Paper } from '@mui/material';
 import "../styles/app.css";
 
 function Layout( {children}) {
-  const [navigation, search, header] = children;
+  const [navigation, search, header, labTabs] = children;
 
   return (
     <Box style={{textAlign: "center"}}>
@@ -26,7 +26,9 @@ function Layout( {children}) {
               {header}
             </Grid>
             <Grid item xs={12}>
-              <Paper style={{ height: "147px", background: "lightgray" }}> User Input</Paper>
+              <Paper style={{ height: "147px", background: "lightgray" }}>
+                {labTabs}
+              </Paper>
             </Grid>
             <Grid item xs={12}>
               <Paper style={{ height: "440px", background: "lightgray" }}> Thread</Paper>
