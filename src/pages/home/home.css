@@ -1,0 +1,136 @@
+/************************/
+
+html, body {
+  height: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+a,
+Link {
+  text-align: center;
+  text-decoration: none;
+}
+
+.apple-button, 
+.google-button {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: rgba(12, 11, 11);
+
+  img {
+    margin-bottom: -4px;
+    width: 20px;
+  }
+
+  &:hover {
+    background-color: #d4d0d0;
+  }
+}
+
+.google-button {
+  color: rgb(82, 81, 81);
+}
+
+/***********************/
+
+.container {
+  display: flex;
+  height: 91.8vh;
+  padding-bottom: 8px;
+  width: 100vw;
+
+  .logo {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 50%;
+
+    img {
+      filter: invert(80%);
+    }
+  }
+
+  .join-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    padding: 70px 0 0 70px;
+    width: 50%;
+
+    h1 {
+      font-size: 4em;
+      padding-bottom: 25px;
+    }
+
+    h5 {
+      font-size: 2em;
+      padding-bottom: 15px;
+    }
+
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 300px;
+
+      .btn {
+        letter-spacing: normal;
+        padding: 12px 0;
+        width: 100%;
+      }
+
+      .hr-break {
+        display: flex;
+        
+        hr {
+          height: 0.5px;
+          margin: 12px;
+          width: 135px;
+        }
+      }
+
+      .signup {
+        box-shadow: 2px 2px #71a0bfd7 inset;
+
+        &:hover {
+          background-color: #1d9cf0d3;
+        }
+      }
+      .sign-in-button {
+        background: transparent;
+        border: 2px solid #4a7897ae;
+        color: #1D9BF0;
+        box-shadow: 2px 2px hsl(0 0% 100% / 0.15) inset;
+
+        &:hover {
+          background-color: rgba(55, 133, 190, 0.1);
+        }
+      }
+    }
+
+    .agreement {
+      font-size: 0.7em;
+    }
+
+    span {
+      color: #1D9BF0;
+    }
+
+    .acct {
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: bolder;
+      margin: 30px 0 8px;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "post": 
+  [
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    },
+    {
+      "avatar": "avatar",
+      "user": "Juan",
+      "userId": "juan123",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "replies": 25,
+      "reposts": 300,
+      "likes":5264,
+      "views": 98456
+    }
+  ]
+}

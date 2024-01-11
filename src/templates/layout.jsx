@@ -1,53 +1,56 @@
-import React from 'react';
-
 import Grid from '@mui/material/Unstable_Grid2';
-import { Box, CssBaseline, Paper } from '@mui/material';
+
+import { Box, CssBaseline } from '@mui/material';
 
 import "../styles/app.css";
 
-function Layout( {children}) {
-  const [navigation, search, header, labTabs] = children;
+function Layout({ children }) {
+  const [navigation, search, header, userInput, thread, subscribe, happening, follow] = children;
 
   return (
-    <Box style={{textAlign: "center"}}>
+    <Box style={{ textAlign: "center" }}>
       <CssBaseline />
-      <Grid container style={{paddingLeft: "5vw", paddingRight: "5vw", flexGrow: 1}} justifyContent={'center'} spacing={2}>
+      <Grid container style={{ flexGrow: 1, margin:'0 130px' }}>
         
         {/** column 1*/ }
-        <Grid item flexBasis={220} >
+        <Grid item flexBasis={280} >
           <Grid xs={12}>
-            {navigation}
+            { navigation }
           </Grid>
         </Grid>
 
         {/** column 2 */}  
-        <Grid item container flexBasis={630} rowSpacing={2} >
-            <Grid item xs={12}>
-              {header}
-            </Grid>
-            <Grid item xs={12}>
-              <Paper style={{ height: "147px", background: "lightgray" }}>
-                {labTabs}
-              </Paper>
-            </Grid>
-            <Grid item xs={12}>
-              <Paper style={{ height: "440px", background: "lightgray" }}> Thread</Paper>
-            </Grid>
+        <Grid item container flexBasis={600} 
+          className='body-inner-container scroll-container'
+        >
+          <Grid item xs={12} >
+            { header }
+          </Grid>
+          <Grid item xs={12}>
+            { userInput }
+          </Grid>
+          <Grid item xs={12} 
+          >
+            { thread }
+          </Grid>
         </Grid>
 
         {/** column 3 */}  
-        <Grid item container flexBasis={380} rowSpacing={2}>
-          <Grid item xs={12} sx={{paddingTop:"16px"}}>
-            {search}
+        <Grid item container flexBasis={370} rowSpacing={2}
+          className='scroll-container'
+          sx={{padding:'0 0 0 32px', height:'100vh', overflowY:'auto'}}
+        >
+          <Grid item xs={12} sx={{paddingTop:"0"}}>
+            { search }
           </Grid>
           <Grid item xs={12}>
-            <Paper style={{ height: "110px", background: "lightgray" }}> Container 1</Paper>
+            { subscribe }
           </Grid>
           <Grid item xs={12}>
-            <Paper style={{ height: "385px", background: "lightgray" }}> Container 2</Paper>
+            { happening }
           </Grid>
           <Grid item xs={12}>
-            <Paper style={{ height: "110px", background: "lightgray" }}> Container 3</Paper>
+            { follow }
           </Grid>
         </Grid> 
       </Grid>
