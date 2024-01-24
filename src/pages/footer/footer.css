@@ -1,0 +1,14 @@
+nav {
+  padding: 4px 20px;
+
+  ul {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      font-size: 0.9em;
+    }
+  }
+}

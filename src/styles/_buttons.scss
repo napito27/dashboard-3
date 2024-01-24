@@ -1,0 +1,32 @@
+.theme-mode {
+  font-size: large;
+  left: 1rem;
+  position: fixed;
+  top: 1rem;
+}
+
+.btn {
+  background-color: $btn-bg-color;
+  border: none;
+  border-radius: 100vmax;
+  color: $text-lightes-color;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+}
+
+.button-icon {
+  color: $btn-bg-color;
+}
+
+.btn-box-width {
+  background-color: $box-dark-bg;
+  border: none;
+  color: $btn-bg-color;
+  cursor: pointer;
+  padding: 1.6rem;
+  text-align: left;
+  width: 100%;
+}

@@ -1,0 +1,33 @@
+:root {
+  // sets the value on rem
+  font-size: 10px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+
+  .light {
+    background-color: $light-bg-color;
+    color: $text-dark-color;
+  }
+  
+  .dark {
+    background-color: $body-dark-bg;
+    color: $light-text-color;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
