@@ -6,7 +6,7 @@ function Search() {
 
   return (
     <Box className="search-container">
-      <SearchOutlinedIcon  />
+      <SearchOutlinedIcon />
       <InputBase 
         className='search-input' 
         placeholder="Search"

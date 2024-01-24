@@ -1,6 +1,11 @@
-import React from 'react';
+import {useLogout} from '../hooks/useLogout';
 
-import { Avatar, Box, Button, IconButton, ListItemText, MenuItem, MenuList } from '@mui/material';
+import { 
+  Avatar, 
+  Box, 
+  IconButton, 
+  MenuList 
+} from '@mui/material';
 
 import { 
   HomeOutlined,
@@ -18,156 +23,81 @@ import {
 
 import logo from '../utils/x-logo.ico';
 
-import "../styles/app.css";
-
-const menu_items = {
-  fontSize: "28px",
-  borderRadius: "100vmax",
-  gap: "16px",
-  padding: "10px 24px 10px 12px",
-  width: "max-content",
-  "&:hover": {
-    backgroundColor: "rgba(24, 24, 24, 0.7)",
-    color: "#fff",
-  }
-}
-
-const primary_text = {
-  fontWeight: "400",
-  fontSize: "20px",
-  textAlign: "left"
-}
-
-const secondary_text = {
-  fontWeight: "400",
-  fontSize: "14px",
-  textAlign: "left",
-  color: "gray"
-}
-
-function Navigation({onClick, themeMode, avatar}) {
+function Navigation({avatar, themeMode}) {
+  const {logout} = useLogout();
 
   return (
     <Box className="nav-container scroll-container">
-      <IconButton 
-        sx={{width:'40px', height:'40px', borderRadius:'50%', padding:'0px', marginLeft:'10px',
-          "&:hover": {
-            backgroundColor: "rgba(24, 24, 24, 0.7)",
-            color: "#fff",
-          }
-        }}
-      >
+      <IconButton className='logo-btn'>
       <img alt='X logo' src={logo} 
-        style={{ width:'100%', filter: themeMode === 'dark' ?  'invert(1)' : '' }}
-      />
+        style={{ width:'100%', filter: themeMode === 'dark' ?  'invert(1)' : '' }}/>
       </IconButton>
 
-      <MenuList sx={{ textAlign:'left', fontWeight:'800'}}>
-        <MenuItem sx={menu_items}>
-          <HomeOutlined fontSize='inherit'/>
-          <ListItemText 
-            primary="Home" 
-            primaryTypographyProps={{ style: primary_text }}
-          />
-        </MenuItem>
+      <MenuList className='nav-menu-list'>
+        <a href='/' className=' nav-menu-item'>
+          <HomeOutlined className='nav-menu-icon'/>
+          <span>Home</span>
+        </a>
+        
+        <a href='/explore' className=' nav-menu-item'>
+          <SearchOutlined className='nav-menu-icon'/>
+          <span>Explore</span>
+        </a>
 
-        <MenuItem sx={menu_items}>
-          <SearchOutlined fontSize='inherit'/>
-          <ListItemText 
-            primary="Explore" 
-            primaryTypographyProps={{ style: primary_text }} 
-          />
-        </MenuItem>
+        <a href='/notifications' className=' nav-menu-item'>
+          <NotificationsNoneOutlined className='nav-menu-icon'/>
+          <span>Notifications</span>
+        </a>
 
-        <MenuItem sx={menu_items}>
-          <NotificationsNoneOutlined fontSize='inherit'/>
-          <ListItemText 
-            primary="Notifications" 
-            primaryTypographyProps={{ style: primary_text }}
+        <a href='/messages' className=' nav-menu-item'>
+          <MailOutlineOutlined className='nav-menu-icon'/>
+          <span>Messages</span>
+        </a>
+
+        <a href='/grok' className=' nav-menu-item'>
+          <OpenInNewOutlined className='nav-menu-icon'/>
+          <span>Grok</span>
+        </a>
+
+        <a href='/lists' className=' nav-menu-item'>
+          <FeaturedPlayListOutlined className='nav-menu-icon'/>
+          <span>Lists</span>
+        </a>
+
+        <a href='/communities' className=' nav-menu-item'>
+          <PeopleOutlined className='nav-menu-icon'/>
+          <span>Communities</span>
+        </a>
+
+        <a href='/premium' className=' nav-menu-item'>
+          <img src={logo} alt='X logo' className='premium-icon'
+            style={{filter: themeMode === 'dark' ?  'invert(1)' : '' }}
           />
-        </MenuItem>
-        <MenuItem sx={menu_items}>
-          <MailOutlineOutlined fontSize='inherit'/>
-          <ListItemText 
-            primary="Messages" 
-            primaryTypographyProps={{ style: primary_text }}
-          />
-        </MenuItem>
-        <MenuItem sx={menu_items}>
-          <OpenInNewOutlined fontSize='inherit'/>
-          <ListItemText 
-            primary="Grok" 
-            primaryTypographyProps={{ style: primary_text }}
-          />
-        </MenuItem>
-        <MenuItem sx={menu_items}>
-          <FeaturedPlayListOutlined fontSize='inherit'/>
-          <ListItemText 
-            primary="Lists" 
-            primaryTypographyProps={{ style: primary_text }}
-          />
-        </MenuItem>
-        <MenuItem sx={menu_items}>
-          <BookmarkBorder fontSize='inherit'/>
-          <ListItemText 
-            primary="Bookmarks" 
-            primaryTypographyProps={{ style: primary_text }}
-          />
-        </MenuItem>
-        <MenuItem sx={menu_items}>
-          <PeopleOutlined fontSize='inherit'/>
-          <ListItemText 
-            primary="Communities" 
-            primaryTypographyProps={{ style: primary_text }}
-          />
-        </MenuItem>
-        <MenuItem sx={menu_items}>
-          {/* <PeopleOutlined fontSize='inherit'/> */}
-          <IconButton 
-            sx={{width:'40px', height:'40px', borderRadius:'50%', padding:'0px', marginLeft:'-7px'
-            }}
-          >
-          <img alt='X logo' src={logo} 
-            style={{ width:'100%', filter: themeMode === 'dark' ?  'invert(1)' : '' }}
-          />
-      </IconButton>
-          <ListItemText 
-            primary="Premium" 
-            primaryTypographyProps={{ style: primary_text }}
-          />
-        </MenuItem>
-        <MenuItem sx={menu_items}>
-          <PermIdentityOutlined fontSize='inherit'/>
-          <ListItemText 
-            primary="Profile" 
-            primaryTypographyProps={{ style: primary_text }}
-          />
-        </MenuItem>
-        <MenuItem sx={menu_items}>
-          <PendingOutlined fontSize='inherit'/>
-          <ListItemText 
-            primary="More" 
-            primaryTypographyProps={{ style: primary_text }}
-          />
-        </MenuItem>
+          <span>Premium</span>
+        </a>
+
+        <a href='/profile' className=' nav-menu-item'>
+          <PermIdentityOutlined className='nav-menu-icon'/>
+          <span>Profile</span>
+        </a>
+
+        <a href='/more' className=' nav-menu-item'>
+          <PendingOutlined className='nav-menu-icon'/>
+          <span>More</span>
+        </a>
+
       </MenuList>
 
       <button className='btn'>Post</button>
 
-      <MenuItem 
-        onClick={onClick}
-        sx={menu_items} 
-        style={{padding:'4px 16px', margin:'20px 0px', width:'100%'}}
-      >
+      <Box className='user-name-btn'>
         <Avatar src={avatar} alt='user avatar'/>
-        <ListItemText 
-          primary="User" 
-          secondary="@UserID" 
-          primaryTypographyProps={{ style: primary_text }}
-          secondaryTypographyProps={{ style: secondary_text }}
-        />
-        <MoreHorizOutlined />
-      </MenuItem>
+        <Box>
+          <span>userName</span>
+          <span>@userId</span>
+        </Box>
+        <MoreHorizOutlined onClick={logout}/>
+      </Box>
     </Box>  
   );
 }

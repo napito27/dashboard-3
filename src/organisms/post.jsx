@@ -1,9 +1,9 @@
-import ThreadBody from '../atoms/thread-body';
-import ThreadIcons from '../atoms/thread-icons';
-import ThreadUserInfo from '../atoms/thread-user-info';
-import UserAvatar from '../atoms/user-avatar';
-
 import { Avatar, Box } from '@mui/material';
+
+import PostBody from '../atoms/post-body';
+import PostsIcons from '../atoms/posts-icons';
+import PostUserInfo from '../atoms/post-user-info';
+
 
 function Post({ avatar, data }) {
   
@@ -14,19 +14,18 @@ function Post({ avatar, data }) {
           key={index} 
           className='post-container'
         >
-          {/* <UserAvatar avatar={avatar}/> */}
           <Box >
             <Avatar src={avatar} alt='user avatar' />
           </Box>
-          <Box sx={{flex: 1, padding:'0 0 0 16px'}}> {/** post body */}
-            <ThreadUserInfo 
+          <Box sx={{flex: 1, padding:'0 0 0 16px'}}>
+            <PostUserInfo 
               user={post.user} 
               id={post.userId}
               />
-            <ThreadBody 
+            <PostBody 
               body={post.body}
               />
-            <ThreadIcons 
+            <PostsIcons 
               replies={post.replies}
               reposts={post.reposts}
               likes={post.likes}

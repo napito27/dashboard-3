@@ -1,54 +1,58 @@
 import { MoreHorizOutlined } from '@mui/icons-material';
-import { IconButton, Tooltip } from '@mui/material';
+import { Box, IconButton, Tooltip } from '@mui/material';
 
 function Happening() {
 
   return (
-    <div className='happening-container'>
-      <h3>What's happening</h3>
+    <Box className='happening-container border-radius-box'>
+      <h3 className='box-title'>What's happening</h3>
 
-      <div>
-        <div>
-          <h5>Politics · Trending</h5>
-          <h4>AR-15</h4>
+      <Box className='display-box-button'>
+        <Box>
+          <p>Trending</p>
+          <h4>VSCode</h4>
           <p>7,327 posts</p>  
-        </div>
+        </Box>
         <Tooltip title="More">        
           <MoreHorizOutlined className='more-icon'/>       
         </Tooltip>
-      </div>
-      <div>
-        <div>
-          <h5>Politics · Trending</h5>
-          <h4>AR-15</h4>
+      </Box>
+
+      <Box className='display-box-button'>
+        <Box>
+          <p>Business and finance · Trending</p>
+          <h4>Racing Bulls</h4>
           <p>7,327 posts</p>  
-        </div>
+        </Box>
         <Tooltip title="More">        
           <MoreHorizOutlined className='more-icon'/>       
         </Tooltip>
-      </div>
-      <div>
-        <div>
-          <h5>Politics · Trending</h5>
-          <h4>AR-15</h4>
+      </Box>
+
+      <Box className='display-box-button'>
+        <Box>
+          <p>Politics · Trending</p>
+          <h4>Netanyahu</h4>
           <p>7,327 posts</p>  
-        </div>
+        </Box>
         <Tooltip title="More">        
           <MoreHorizOutlined className='more-icon'/>       
         </Tooltip>
-      </div>
-      <div>
-        <div>
-          <h5>Politics · Trending</h5>
-          <h4>AR-15</h4>
+      </Box>
+
+      <Box className='display-box-button'>
+        <Box>
+          <p>Trending</p>
+          <h4>Toro Rosso</h4>
           <p>7,327 posts</p>  
-        </div>
+        </Box>
         <Tooltip title="More">        
           <MoreHorizOutlined className='more-icon'/>       
         </Tooltip>
-      </div>
-      <button>Show more</button>
-    </div>
+      </Box>
+
+      <button className='btn-box-width'>Show more</button>
+    </Box>
   );
 }
 

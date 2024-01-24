@@ -1,35 +1,52 @@
 import React from 'react';
 
-import { ThemeProvider, createTheme } from '@mui/material';
+// external libraries
+import {Brightness4} from '@mui/icons-material';
+import {ThemeProvider, createTheme} from '@mui/material';
 
-import Header from "../atoms/header";
-import Layout from "../templates/layout";
-import Navigation from "../organisms/navigation";
-import UserInput from '../organisms/user-input';
-import Search from "../organisms/search";
-import Thread from '../atoms/thread';
-
-import avatar from '../utils/man-beard.webp';
+// customized components
 import Follow from '../atoms/follow';
 import Happening from '../atoms/happening';
-import Subscribe from '../atoms/subscribe';
+// import Header from "../atoms/header";
 import Home from './home/home';
-
-import "../styles/app.css";
-import { BorderOuter, Brightness4 } from '@mui/icons-material';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Signup from './signup/signup';
+import Layout from "../templates/layout";
+import Navigation from "../organisms/navigation";
+// import UserInput from '../organisms/create-new-twitt';
+import Search from "../organisms/search";
 import SignIn from './login/sign-in';
+import Signup from './signup/signup';
+import Subscribe from '../atoms/subscribe';
+// import Thread from '../atoms/thread';
+
+// images
+import avatar from '../utils/man-beard.webp';
+
+// styles
+import '../styles/styles.scss';
+
+// utilities
+import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
+import PostsDisplay from '../organisms/posts-display';
+import { useAuthContext } from '../hooks/useAuthContext';
+import Dashboard from '../organisms/dashboard';
 
 const themeFont = createTheme({
   typography: {
     fontFamily: 'Open Sans',
-  }
+  },
+  
+  MuiTooltip: {
+    tooltip: {
+      fontSize: '30px', 
+    },
+  }, 
 });
 
-const App = () => {
+function App () {
   const [theme, setTheme] = React.useState('light');
-  const [postData, setPostData] = React.useState([])
+  const [postData, setPostData] = React.useState([]);
+  // const [signin, setSignin] = React.useState(false);
+  const {user, authIsReady} = useAuthContext();
 
   React.useEffect(() => {
     async function fetchPostData() {
@@ -57,6 +74,10 @@ const App = () => {
     window.localStorage.setItem('theme', newTheme);
   };
 
+  // const handleVisible = () => {
+  //   setSignin(true);
+  // }
+
   return (
     <ThemeProvider 
       theme={themeFont}
@@ -66,23 +87,40 @@ const App = () => {
           onClick={toggleTheme}
           className='theme-mode'
         />
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/signup' element={<Signup />}/>
-            <Route path='/signin' element={<SignIn />}/>            
-          </Routes>        
-        </BrowserRouter>
-        {/* <Layout>
-          <Navigation onClick={toggleTheme} themeMode={theme} avatar={avatar}/>
-          <Search />
-          <Header/>
-          <UserInput avatar={avatar}/>
-          <Thread avatar={avatar} data={postData}/>
-          <Subscribe theme={theme}/>
-          <Happening />
-          <Follow />
-        </Layout> */}
+        {/* {authIsReady && ( */}
+          {/* <BrowserRouter>
+            <Routes>
+              <Route 
+                path='/' 
+                element={<Home />}
+                // element={user ? <Dashboard /> : <Navigate to="/Home" />}
+              />
+              <Route 
+                path='/signup' 
+                element={<Signup />}
+                // element={!user ? <Navigate to="/signup" /> : <Dashboard />}
+              />
+              <Route 
+                path='/signin' 
+                // element={!user ? <Navigate to="/login" /> : <Dashboard />}
+                element={<SignIn />}
+                // onClick={handleVisible}
+              /> 
+              {/* <Route 
+                path='/dashboard'
+                element={}
+              /> */}
+            {/* </Routes>        
+          </BrowserRouter> */}
+        {/* )}   */}
+          <Layout>
+            <Navigation themeMode={theme} avatar={avatar}/>
+            <Search />
+            <PostsDisplay avatar={avatar} data={postData}/>
+            <Subscribe theme={theme}/>
+            <Happening />
+            <Follow avatar={avatar}/>
+          </Layout>
       </div>
     </ThemeProvider>
   );

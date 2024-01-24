@@ -1,14 +1,17 @@
 import React from 'react';
 
+import {useSignup} from '../../hooks/useSignup';
+
 import './signup.css';
 
 function Signup() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const {error, signup} = useSignup();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    signup(email, password);
   }
 
   return (
@@ -34,6 +37,7 @@ function Signup() {
           />
         </label>
         <button className='btn'>Sign up</button>
+        {error && <p>{error}</p>}
       </form>
     </div>
   );

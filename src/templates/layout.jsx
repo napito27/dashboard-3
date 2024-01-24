@@ -2,10 +2,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 import { Box, CssBaseline } from '@mui/material';
 
-import "../styles/app.css";
-
 function Layout({ children }) {
-  const [navigation, search, header, userInput, thread, subscribe, happening, follow] = children;
+  const [navigation, search, postsDisplay, subscribe, happening, follow] = children;
 
   return (
     <Box style={{ textAlign: "center" }}>
@@ -20,27 +18,18 @@ function Layout({ children }) {
         </Grid>
 
         {/** column 2 */}  
-        <Grid item container flexBasis={600} 
-          className='body-inner-container scroll-container'
-        >
+        <Grid container flexBasis={600}>
           <Grid item xs={12} >
-            { header }
-          </Grid>
-          <Grid item xs={12}>
-            { userInput }
-          </Grid>
-          <Grid item xs={12} 
-          >
-            { thread }
+            { postsDisplay }
           </Grid>
         </Grid>
 
         {/** column 3 */}  
         <Grid item container flexBasis={370} rowSpacing={2}
           className='scroll-container'
-          sx={{padding:'0 0 0 32px', height:'100vh', overflowY:'auto'}}
+          sx={{margin:'0', padding:'0 0 0 32px', height:'100vh', overflowY:'auto'}}
         >
-          <Grid item xs={12} sx={{paddingTop:"0"}}>
+          <Grid item xs={12} sx={{padding:'0'}}>
             { search }
           </Grid>
           <Grid item xs={12}>

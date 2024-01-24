@@ -1,52 +1,52 @@
 import { Avatar, Box } from '@mui/material';
-import UserAvatar from './user-avatar';
 
 function Follow({avatar}) {
 
   return (
-    <div className='follow-container'>
-      <h3>Who to follow</h3>
-      <div className='follow-inner-cont'>
-        <div className='user-info'>
-          {/* <UserAvatar />   */}
+    <Box className='follow-container border-radius-box'>
+      <h3 className='box-title'>Who to follow</h3>
+      
+      <Box className='display-box-button'>
+        <Box className='user-info'>
           <Box >
-            <Avatar src={avatar} alt='user avatar' />
+            <Avatar src={avatar} alt='avatar' />
           </Box>
-          <div>
-            <p>User</p>
+          <Box>
+            <h5>User</h5>
             <p>@userId</p>
-          </div>
-        </div>
+          </Box>
+        </Box>
         <button className='btn'>Follow</button>
-      </div>
-      <div className='follow-inner-cont'>
-        <div className='user-info'>
-          {/* <UserAvatar />   */}
+      </Box>
+      
+      <Box className='inner-box display-box-button'>
+        <Box className='user-info'>
           <Box >
-            <Avatar src={avatar} alt='user avatar' />
+            <Avatar src={avatar} alt='avatar' />
           </Box>
-          <div>
-            <p>User</p>
+          <Box>
+            <h5>User</h5>
             <p>@userId</p>
-          </div>
-        </div>
+          </Box>
+        </Box>
         <button className='btn'>Follow</button>
-      </div>
-      <div className='follow-inner-cont'>
-        <div className='user-info'>
-          {/* <UserAvatar />   */}
+      </Box>
+      
+      <Box className='inner-box display-box-button'>
+        <Box className='user-info'>
           <Box >
-            <Avatar src={avatar} alt='user avatar' />
+            <Avatar src={avatar} alt='avatar' />
           </Box>
-          <div>
-            <p>User</p>
+          <Box>
+            <h5>User</h5>
             <p>@userId</p>
-          </div>
-        </div>
+          </Box>
+        </Box>
         <button className='btn'>Follow</button>
-      </div>
-      <button className='follow-btn'>Show more</button>
-    </div>
+      </Box>
+
+      <button className='btn-box-width'>Show more</button>
+    </Box>
   );
 }
 

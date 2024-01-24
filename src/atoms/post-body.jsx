@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 
-function ThreadBody({ body }) {
+function PostBody({ body }) {
 
   return (
     <Box className='thread-body'> 
@@ -9,4 +9,4 @@ function ThreadBody({ body }) {
   );
 }
 
-export default ThreadBody;
+export default PostBody;

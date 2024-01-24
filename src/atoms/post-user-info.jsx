@@ -2,24 +2,24 @@ import {  Box, IconButton, Tooltip } from '@mui/material';
 
 import { Verified, MoreHorizOutlined, } from '@mui/icons-material';
 
-function ThreadUserInfo({ user, id }) {
+function PostUserInfo({ user, id }) {
 
   return (
-    <Box sx={{display:'flex'}}>
+    <Box className='post-user-info' >
+
       <Box className='thread-user-info' >
         <span>{user}</span>
-        <Verified fontSize='small' className='button-icon'/>
+        <Verified fontSize='medium' className='verified-icon'/>
         <span>@{id}</span>
       </Box>
+
       <Tooltip title="More">
-        <IconButton className='thread-icon-more' 
-          sx={{color:'#4B4E52', padding:'0'}}
-        >
-          <MoreHorizOutlined />
+        <IconButton className='post-icon-more'>
+          <MoreHorizOutlined className='more-icon'/>
         </IconButton>
       </Tooltip>
     </Box>
   );
 }
 
-export default ThreadUserInfo;
+export default PostUserInfo;

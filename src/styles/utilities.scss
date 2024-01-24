@@ -1,0 +1,33 @@
+.border-radius-box {
+  background-color: $box-dark-bg;
+  border: 2px solid #17181C;
+  border-radius: .8rem;
+  text-align: left;
+}
+
+.box-title {
+  // color: $text-lightes-color;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 1.6rem;
+}
+
+.display-box-button {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+
+  &:hover {
+    background-color: $btn-opacity-hover;
+  }
+}
+
+.post-icon-box {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $text-light-color;
+}
